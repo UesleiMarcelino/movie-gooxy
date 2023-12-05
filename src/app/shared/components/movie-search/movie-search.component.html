@@ -1,0 +1,11 @@
+
+<movie-header></movie-header>
+<div class="search-input">
+  <span class="material-symbols-outlined">
+    keyboard_voice
+    </span>
+  <input type="text" #input (keyup.enter)="searchMovie(input.value)" [placeholder]='"placeholder_search" | translate'>
+  <span class="material-symbols-outlined" (click)="searchMovie(input.value)">
+    search
+    </span>
+</div>

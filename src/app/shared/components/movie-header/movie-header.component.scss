@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.child {
+  width: 508px;
+  height: 152px;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}

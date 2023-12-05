@@ -1,0 +1,53 @@
+<div *ngIf="this.isLoading"  class="loading">Loading</div>
+<div class="responsive">
+  <div *ngIf="detailsMovie.Poster !== 'N/A'">
+    <img  class="responsive-img" [src]="detailsMovie.Poster" />
+    <span class="material-symbols-outlined icon ">
+      play_circle
+    </span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="text-center">
+    <span routerLink="/movies" class="material-symbols-outlined float-start">
+      arrow_circle_left
+    </span>
+    <span class="title">{{detailsMovie.Title}}</span>
+    <p class="subtitle">{{detailsMovie.Year}} • {{detailsMovie.Genre}} • {{detailsMovie.Runtime}}</p>
+    <p class="description"> {{detailsMovie.Plot}}</p>
+  </div>
+</div>
+<hr class="border-2 border-top" />
+
+
+
+<div class="float-end">
+  <div id="rightImage" *ngIf="detailsMovie.Poster !== 'N/A'">
+    <img [src]="detailsMovie.Poster" />
+    <div class="overlay">
+      <div class="icon">
+        <span class="material-symbols-outlined">
+          play_circle
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parent">
+  <div class="title-cast mb-4">
+    <span >Cast</span>
+  </div>
+  <div class="wrapper">
+    
+    <div class="col-md-4" *ngFor="let item of actorsDetailsMovie; let i = index">
+      <img class="image" [src]="'https://api.multiavatar.com/'+ item + '.svg'" />
+      <span class="cast-name"> {{item}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+
+</div>
